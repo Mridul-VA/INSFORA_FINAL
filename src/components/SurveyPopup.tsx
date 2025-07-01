@@ -24,19 +24,7 @@ export const SurveyPopup: React.FC = () => {
     setShowPopup(false);
   };
 
-  /* open WhatsApp */
-  const handleWhatsAppClick = (
-    e: React.MouseEvent<HTMLButtonElement>
-  ) => {
-    e.preventDefault();
-    e.stopPropagation();
-    window.open(
-      'https://wa.me/919876543210?text=Hi%20INSFORA,%20I%20would%20like%20to%20fill%20the%20research%20survey%20later.',
-      '_blank',
-      'noopener,noreferrer'
-    );
-    setShowPopup(false);
-  };
+  
 
   const handleClose = () => setShowPopup(false);
 
@@ -73,14 +61,6 @@ export const SurveyPopup: React.FC = () => {
             className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Take Survey Now
-          </button>
-
-          <button
-            onClick={handleWhatsAppClick}
-            className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold py-3 px-6 rounded-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-          >
-            <MessageCircle size={20} />
-            Connect to WhatsApp
           </button>
 
           <button
